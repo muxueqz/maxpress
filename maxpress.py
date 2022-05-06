@@ -1,4 +1,4 @@
-from mistune import Markdown
+import mistune
 from six import StringIO
 import premailer, lesscpy
 import sys, os, re, json, shutil
@@ -51,7 +51,7 @@ def compile_styles(file=join_path(ROOT, 'less', 'default.less')):
 
 # 将待解析的md文档转换为适合微信编辑器的html
 def md2html(text, styles=None, poster='', banner='', convert_list=True, ul_style='\u25CB'):
-    md = Markdown()
+    md = mistune.create_markdown()
 
     # 将markdown列表转化为带序号的普通段落（纯为适应微信中列表序号样式自动丢失的古怪现象）
     if convert_list:

@@ -1,4 +1,4 @@
 premailer>=3.0.1
-mistune>=0.7.4
+mistune==2.0.2
 lesscpy>=0.12.0
 six>=1.10.0
